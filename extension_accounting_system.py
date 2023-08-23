@@ -199,19 +199,19 @@ if __name__ == "__main__":
 
     @manager.sales_decorator
     def sales_operations(self):
-        pass
+        Sales(warehouse).run
 
     @manager.purchase_decorator
     def purchase_operations(self):
-        pass
+        Purchase(warehouse).run
     
     @manager.review_decorator
     def review_operations(self):
-        pass
+        warehouse.review
 
     @manager.balance_decorator
     def balance_operations(self):
-        pass
+        warehouse.balance
 
     manager.assign("sale", sales_operations)
     manager.assign("purchase", purchase_operations)
